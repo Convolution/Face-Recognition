@@ -48,7 +48,7 @@ while True:
             bottom_right = (face_location[1], face_location[2]+20)
 
             cv2.rectangle(frame, top_left, bottom_right, color, cv2.FILLED)
-            cv2.putText(frame, match, (face_location[3]+10, face_location[2]+15, cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 0), FONT_THICKNESS)
+            cv2.putText(frame, match, (face_location[3]+10, face_location[2]+15), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 0), FONT_THICKNESS)
 
     cv2.imshow(filename, frame)
     if cv2.waitKey(1) & 0xFF == ord('q'):
